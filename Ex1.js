@@ -7,3 +7,15 @@ por consola la suma de los dos parametros.
 1.2 Ejecuta esta función pasando un solo parametro
 1.3 Ejecuta esta función pasando dos parametros
 */
+const sum = (a = 10, b = 5) => {
+  console.log(a + b);
+};
+
+/* 1.1 */
+sum();
+
+/* 1.2 */
+sum(5);
+
+/* 1.3 */
+sum(5, 6);
