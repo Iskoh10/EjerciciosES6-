@@ -19,3 +19,26 @@ const toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']}
 pero sin editar el array inicial. De nuevo, usando spread operatos.
 const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
 */
+
+/* 3.1 */
+const pointsList = [32, 54, 21, 64, 75, 43];
+const copyPointsList = [...pointsList];
+
+/* 3.2 */
+const toy = { name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor' };
+const copyToy = { ...toy };
+
+/* 3.3 */
+const pointsLis2 = [54, 87, 99, 65, 32];
+const pointsLis3 = [...pointsList, ...pointsLis2];
+
+/* 3.4 */
+const toyUpdate = { lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk'] };
+const fullToy = { ...toy, ...toyUpdate };
+
+/* 3.5 */
+const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
+const copyColors = [...colors];
+copyColors.splice(2, 1);
+console.log(copyColors);
+console.log(colors);
