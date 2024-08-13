@@ -73,12 +73,27 @@ const users = [
   }
 ];
 
-const numOfUser = users.length;
+// Media Total
+let mediaVolume = 0;
 
 for (const user of users) {
-  for (const props in user.favoritesSounds) {
-    console.log(`${props} = ${user.favoritesSounds[props].volume}`);
-    console.log(props);
+  for (const key in user.favoritesSounds) {
+    mediaVolume += user.favoritesSounds[key].volume / users.length;
   }
 }
-//todo HACERLO
+
+console.log(mediaVolume);
+
+// Media por Usuario
+for (const user of users) {
+  let totalVolume = 0;
+  let numSound = 0;
+
+  for (const key in user.favoritesSounds) {
+    totalVolume += user.favoritesSounds[key].volume;
+    numSound++;
+  }
+  console.log(
+    `El volumen media de ${user.name} es de ${totalVolume / numSound}`
+  );
+}
