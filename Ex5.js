@@ -82,12 +82,9 @@ const legendsStreamers = streamers.filter((streamer) => {
 });
 console.log(legendsStreamers);
 
-/* const upperLegendsStreamers = legendsStreamers.map((streamer) => {
+legendsStreamers.forEach((streamer) => {
   if (streamer.age > 35) {
-    return (streamer = streamer.gameMorePlayed.toUpperCase());
-  } else {
-    return streamer;
+    streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
   }
 });
-
-console.log(upperLegendsStreamers); */
+console.log(legendsStreamers);
