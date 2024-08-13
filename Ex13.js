@@ -11,3 +11,30 @@ Finalmente retorna el array.
 De nuevo haz varios ejemplos para practicar y comprueba que funcionan 
 correctamente.
 */
+function findArrayIndex(array, text) {
+  if (array.indexOf(text) !== -1) {
+    console.log(`La palabra ${text} tiene un indice: ${array.indexOf(text)}`);
+    console.log('Y va a ser eliminado');
+  } else {
+    console.log('Text not found!');
+  }
+  removeItem(array, array.indexOf(text));
+}
+
+const removeItem = (array, text) => {
+  array.splice(text, 1);
+  console.log(array);
+};
+
+const mainCharacters = [
+  'Luke',
+  'Leia',
+  'Han Solo',
+  'Chewbacca',
+  'Rey',
+  'Anakin',
+  'Obi-Wan'
+];
+
+findArrayIndex(mainCharacters, 'Rey');
+findArrayIndex(mainCharacters, 'Chewbacca');

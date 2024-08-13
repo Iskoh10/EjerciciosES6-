@@ -17,3 +17,25 @@ const mainCharacters = [
   "Obi-Wan",
 ];
 */
+
+function findArrayIndex(array, text) {
+  if (array.indexOf(text) !== -1) {
+    console.log(`La palabra ${text} tiene un indice: ${array.indexOf(text)}`);
+  } else {
+    console.log('Text not found!');
+  }
+}
+
+const mainCharacters = [
+  'Luke',
+  'Leia',
+  'Han Solo',
+  'Chewbacca',
+  'Rey',
+  'Anakin',
+  'Obi-Wan'
+];
+
+findArrayIndex(mainCharacters, 'Leia');
+findArrayIndex(mainCharacters, 'Rey');
+findArrayIndex(mainCharacters, 'Anakin');

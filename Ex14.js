@@ -5,3 +5,12 @@ Como hemos dicho, que la función use el parametro para simular una tirada de da
 y retornar el resultado. Si no se te ocurre como hacer un numero aleatorio no te 
 preocupes! Busca información sobre la función de javascript Math.random()
 */
+
+function rollDice(caras) {
+  let tiradaAleatoria = Math.floor(Math.random() * caras);
+  console.log(tiradaAleatoria);
+}
+
+rollDice(6);
+rollDice(5);
+rollDice(10);

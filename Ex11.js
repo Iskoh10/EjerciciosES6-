@@ -83,8 +83,15 @@ const users = [
   }
 ];
 
+let soundsCount = [];
+
 for (const user of users) {
   for (const key in user.favoritesSounds) {
-    console.log(`${key}`);
+    if (soundsCount[key]) {
+      soundsCount[key]++;
+    } else {
+      soundsCount[key] = 1;
+    }
   }
 }
+console.log(soundsCount);
