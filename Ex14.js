@@ -7,7 +7,7 @@ preocupes! Busca información sobre la función de javascript Math.random()
 */
 
 function rollDice(caras) {
-  let tiradaAleatoria = Math.floor(Math.random() * caras);
+  let tiradaAleatoria = Math.floor(Math.random() * caras) + 1;
   console.log(tiradaAleatoria);
 }
 
